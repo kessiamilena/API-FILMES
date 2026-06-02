@@ -1,21 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&family=Kavoon&display=swap');
+
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    box-sizing: border-box;
     background-color: #141414;
-    color: white;
+    color: #FFFFFF;
+    font-family: "Blinker", serif;
 }
 
-/* cabeçalho */
 .cabecalho {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
-    background-color: #000;
+    background-color: #000000;
 }
 
 .cabecalho h1 {
-    color: #e50914;
+    font-family: "Kavoon", serif;
+    color: #E50914;
 }
 
 .cabecalho input {
@@ -25,7 +29,8 @@ body {
     border: none;
 }
 
-/* Grid de filmes */
+/*  FILMES  */
+
 .grid-filmes {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -33,11 +38,15 @@ body {
     padding: 20px;
 }
 
-/* Card do filme */
+/* card de filme */
 .filme {
     position: relative;
-    cursor: pointer;
     transition: transform 0.3s;
+}
+
+.filme:hover {
+    cursor: pointer;
+    transform: scale(1.05); /* aumenta a escala do elemento quando passar o mouse por cima */
 }
 
 .filme img {
@@ -45,15 +54,10 @@ body {
     border-radius: 6px;
 }
 
-.filme:hover {
-    transform: scale(1.05);
-}
-
-
 .info {
     position: absolute;
     bottom: 0;
-    background: linear-gradient(transparent, black);
+    background: linear-gradient(transparent, #000000);
     width: 100%;
     padding: 10px;
     border-radius: 0 0 6px 6px;
@@ -66,5 +70,5 @@ body {
 
 .info span {
     font-size: 12px;
-    color: #ccc;
+    color: #CCCCCC;
 }
